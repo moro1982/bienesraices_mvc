@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+    background-color: v.$grisOscuro;
+    padding: calc( v.$separacion / 2 ) 0;
+    margin-bottom: 0;
+    .contenido-footer {
+        padding-top: calc( v.$separacion / 2 );
+    }
+    .copyright {
+        color: v.$blanco;
+        text-align: center;
+    }
+    .navegacion {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        height: auto;
+    }
+}
