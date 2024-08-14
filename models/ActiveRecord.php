@@ -50,7 +50,7 @@ class ActiveRecord {
         //-> Concatenar "llave = valor" y almacenarlos en un array
         $valores = [];
         foreach ($atributos as $key => $value) {
-            $valores[] = "${key} = '${value}'";
+            $valores[] = "{$key} = '{$value}'";
         }
         //-> Construir el string del query
         $query = "UPDATE " . static::$tabla . " SET ";
@@ -146,7 +146,7 @@ class ActiveRecord {
 
     //-> Buscar un registro por su ID
     public static function find($id) {
-        $query = "SELECT * FROM " . static::$tabla . " WHERE id = ${id};";
+        $query = "SELECT * FROM " . static::$tabla . " WHERE id = {$id};";
         $resultado = self::consultarSQL($query);
         return array_shift($resultado);
     }
